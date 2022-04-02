@@ -1,50 +1,297 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Remove default html margin, padding and assign box-sizinz as border-box to all */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body {
-    color: darkblue;
-    font-family: Helvetica, Arial, sans-serif;
-    background-color:azure;
-  }
-  header {
-    padding: 20px 35px;
-    background-color: dimgray;
-  }
-  header h1 {
-    font-weight: bold;
-    font-size: 36px;
-    color: darkblue;
-    margin: 0;
-    display: inline;
-    background-color: cadetblue;
-  }
-  header nav {
-    float: right;
-    margin: 7px 0;
-  }
-  header nav ul li{
-    display: inline;
-  }
-  header nav ul li a{
-    margin: 0 30px;
-    font-weight:normal;
-    font-size: 17px;
-    color: blue
-  }
-  section {
-    padding: 60px;
+
+/* Global variable definitions */
+:root {
+--header-footer-background-color: #404040;
+--lightskyblue: lightskyblue;
+--lightgray: lightgray;
+--about-me-work-border: #333366;
+--rgba-border-color-opacity: rgba(135, 206, 250, 0.8);
 }
-  .Cool-Subtitle {
-    position: absolute;
-    bottom: 20px;
-    right: 50px;
-    font-size: larger;
-    background-color: cadetblue;
-  }
-  .Page-Style {
-      background-image:url("../assets/images/Applejack.full.1297074.jpg");
-      padding: 100px 200px;
-      position: relative;
-  }
+
+/* Start of Semantic code */
+
+html {
+scroll-behavior:auto;
+}
+
+/* Start of Header code */
+header {
+display: flex; /* Flex container to display the child elements as flex with space between and wrap */
+justify-content: space-between;
+flex-wrap: wrap;
+list-style: none;
+background-color: var(--header-footer-background-color); 
+}
+
+header h1 {
+padding-left: 50px;
+}
+
+header nav ul {
+display: flex; /* Flex container to display the child elements as flex with flex-end, wrap, and align the items in center */
+flex-wrap: wrap;
+justify-content: flex-end;
+align-items: center;
+list-style: none;
+padding-right: 0px;
+}
+
+header nav ul li {
+font-size: 1.8vw;
+padding: 10px 15px;
+margin-top: 5px;
+margin-bottom: 10px;
+
+}
+
+
+header a {
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 5px;
+text-decoration: none;
+border-bottom: 2px solid var(--lightskyblue);
+color: var(--lightskyblue);
+}
+/* End of header code */
+
+/* Start of body code */
+body{
+background-color: var(--lightgray); /* Apply background to all of the body of the page */
+font-family: 'Martel', serif;
+}
+/* End of body code */
+
+/* Start of footer code */
+footer {
+background-color: var(--header-footer-background-color); 
+color: var(--lightskyblue); /* Title color */
+}
+
+footer a {
+text-decoration: none;
+border-bottom: 2px solid var(--lightskyblue); 
+color: var(--lightskyblue); 
+font-size: 1.8vw; 
+font-weight: bold;
+}
+/* End footer code */
+/* End of Semantic code */
+
+/* Start of hover effects on multiple classes */
+
+/* Header nav hover */
+.nav-effects a:hover{ 
+color: var(--lightskyblue);
+font-weight: bold;
+text-shadow: 0px 0px 20px var(--lightskyblue);
+}
+
+/* Work projects hover */
+.work-grid-container div:hover{ 
+mix-blend-mode: color-burn;
+}
+
+/* Footer hover */
+.footer-container a:hover{
+color: var(--lightskyblue);
+font-weight: bold;
+text-shadow: 0px 0px 20px var(--lightskyblue);
+}
+/* End of hover effects on multiple classes */
+
+/* Start of hero section with background */
+.hero { /* Here section is a flex container */
+height: 300px;
+background-image: url("../assets/images/Applejack.full.1297074.jpg");
+border-bottom-left-radius: 30px 30px; 
+border-bottom-right-radius: 30px 30px;
+background-size: cover; 
+background-attachment: fixed; /* Image scrolls with the page */
+display: flex;
+justify-content: flex-end;
+flex-wrap: wrap;
+flex-direction: row; 
+align-items: flex-end;
+}
+
+.hero-subtitle { 
+padding-bottom: 15px;
+padding-right: 15px;
+}
+/* End of hero section with background */
+
+
+
+/* Start of FLEX CSS Main body code About Me*/
+.about-me-wrapper { 
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+justify-content: center;
+margin-top: 50px;
+}
+
+.about-me-grid-container {/* CSS Grid */
+width: 80%; 
+display: grid;
+grid-template-columns: 1fr repeat(3, 2fr); 
+grid-template-rows: repeat(2, 1fr); 
+gap: 10px 10px; 
+}
+
+.about-me-item.about-me-title { 
+padding-top: 0px;
+font-size: 35px;
+grid-row: 1 / span 2;
+padding-right: 10px;
+text-align: right;
+border-right: 2px solid var(--about-me-work-border);
+}
+
+.about-me-item.p1 {
+padding-left: 10px;
+grid-column: 2 / span 3;
+grid-row: 1 / span 2;
+}
+
+.about-me-item.p2 {
+padding-left: 10px;
+grid-column: 2 / span 3;
+grid-row: 3 / span 2;
+}
+/* End of FLEX CSS Main body code About me*/
+
+
+/* Start of FLEX CSS Main body code Work projects*/
+.work-wrapper { 
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+justify-content: center;
+margin-top: 50px;
+
+}
+.work-grid-container {/* CSS Grid */
+width: 80%;
+display: grid;
+
+grid-template-columns: 1fr repeat(3, 2fr); 
+grid-template-rows: repeat(10, 1fr);
+gap: 10px 10px; 
+}
+
+.work-item.work-title {
+padding-top: 10px;
+font-size: 35px;
+grid-row: 1 / span 9;
+text-align: right;
+padding-right: 10px;
+border-right: 2px solid var(--about-me-work-border);
+}
+
+.work-item-project.challenge-1-refactor { /* Grid cells with embedded images */
+grid-column: 2 / span 2;
+grid-row: 1 / span 6;
+background-image: url("../assets/images/challeng-1-refactor-code-smaller.jpg");
+background-size: cover; 
+display: flex; 
+align-items: flex-end; 
+padding-left: 0px;
+padding-bottom: 15px;
+text-align: left;
+border: .25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.run-buddy {
+grid-column: 3 /span 1;
+grid-row: 7 / span 3;
+background-image: url("../assets/images/Applejack.full.1297074.jpg");
+background-size: cover;
+display: flex; 
+align-items: flex-end; 
+padding-left: 0px;
+padding-bottom: 15px;
+text-align: left;
+border: .25vw solid var(--rgba-border-color-opacity);
+}
+
+/* End of FLEX CSS Main body code Work projects*/
+
+/* Start of span code */
+.span-background { 
+background-color: var(--lightskyblue);
+position: relative;
+line-height: 1.5;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 5%;
+opacity: .8;
+}
+
+.span-background.title { /* Move away from the top/bottom container*/
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+/* Hero section cool subtitle with opacity of .95 */
+.span-background.opacity{
+opacity: .95; 
+font-size: 30px;
+}
+
+.span-background.lower-text {
+font-size: x-small;
+}
+/* End of span code */
+
+/* Start of footer class code */
+
+/* CSS Flex/Grid Footer non-semantic Code */
+.footer-wrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 50px;
+}
+
+.footer-container { /* CSS Grid */
+width: 80%;
+display: grid;
+grid-template-columns: 1fr repeat(3, 2fr); 
+grid-template-rows: repeat(3,2fr); 
+gap: 20px 20px; 
+}
+
+.footer-grid-item {
+text-align: center;
+}
+
+.footer-grid-item.contact-me {
+padding-top: 10px;
+font-size: 35px;
+grid-row: 1 / span 3;
+text-align: right;
+padding-right: 10px;
+border-right: 2px solid var(--lightskyblue);
+}
+
+.footer-grid-item.phone{
+grid-row: 2;
+}
+
+.footer-grid-item.email{
+grid-row: 2;
+}
+
+.footer-grid-item.git-hub{
+grid-row: 2;
+}
+/* End of footer class code */
+/* End of CSS Flex/Grid Footer non-semantic Code */
