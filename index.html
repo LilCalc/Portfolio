@@ -1,74 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="../Portfolio/assets/style.css" />
-        <meta charset="UTF-8" />
-        <Title>Portfolio</Title>
-    </head>
-    <body>
-        <!--Header for Portfolio-->
-        <header>
-            <h1>
-                <a>Noah Savino</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#About-Me">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#Work">Work</a>
-                    </li>
-                    <li>
-                        <a href="#Contact-Me">Contact Me</a>
-                    </li>
-                    <li>
-                        <a href="#Resume">Resume</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!--Page style for the cool subtitle-->
-        <Section class="Page-Style">
-            <div class="Cool-Subtitle">
-                <h1>Cool Subtitle</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Noah Savino</title>
+</head>
+
+<body>
+    <header>
+        <span class="span-background title"> <!-- Class for title background -->
+            <h1>Noah Savino</h1>
+        </span>
+        <nav>
+            <ul class="nav-effects"> <!-- Header nav bar -->
+                <li>
+                    <!-- Anchor elements -->
+                    <a href="#about-me">About Me</a>
+                </li>
+                <li>
+                    <a href="#work">Work</a>
+                </li>
+                <li>
+                    <a href="#contact-me">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Here Section -->
+    <!-- Hero section will have the image as background -->
+    <section class="hero">
+        <div class="hero-subtitle">           
+                <span class="span-background opacity">Stay Safe Everyone!</span>
+        </div>
+    </section>
+
+    <!-- About Me article grid-->
+    <article> 
+        <div id="about-me" class="about-me-wrapper"> 
+            <div class="about-me-grid-container"> 
+                <div class="about-me-item about-me-title"> 
+                    <p> About me </p>
+                </div>
+                <div class="about-me-item p1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere purus arcu, ut porttitor eros efficitur in. Integer mollis elit sit amet lorem malesuada mattis. Morbi elit nibh, ultricies ut augue a, iaculis vulputate enim. Morbi rhoncus mauris id tellus sagittis venenatis. Proin in magna non metus dictum posuere. Sed tincidunt aliquet nisi, in ornare augue aliquam vestibulum. In lacinia arcu eros, eu tincidunt tellus condimentum ac. Aliquam molestie mauris sed ultrices ornare. Aliquam iaculis at nunc ut volutpat. Maecenas blandit sagittis nunc, sed sollicitudin lectus eleifend sit amet. Proin scelerisque laoreet sagittis. In sed ante turpis. Etiam cursus nisl ac lectus hendrerit, ac tincidunt elit pharetra. Etiam posuere finibus ligula.
+
+                    </p>
+                </div>
+                <div class="about-me-item p2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere purus arcu, ut porttitor eros efficitur in. Integer mollis elit sit amet lorem malesuada mattis. Morbi elit nibh, ultricies ut augue a, iaculis vulputate enim. Morbi rhoncus mauris id tellus sagittis venenatis. Proin in magna non metus dictum posuere. Sed tincidunt aliquet nisi, in ornare augue aliquam vestibulum. In lacinia arcu eros, eu tincidunt tellus condimentum ac. Aliquam molestie mauris sed ultrices ornare. Aliquam iaculis at nunc ut volutpat. Maecenas blandit sagittis nunc, sed sollicitudin lectus eleifend sit amet. Proin scelerisque laoreet sagittis. In sed ante turpis. Etiam cursus nisl ac lectus hendrerit, ac tincidunt elit pharetra. Etiam posuere finibus ligula.
+
+                    </p>
+                </div>  
             </div>
-        </Section>
-        <!--About Me Section-->
-        <Section Id="About-Me" class="About-Me-Section">
-            <h2 class="section-title primary-border">About Me</h2>
-            <h3>Assure polite his really and others figure though. Day age advantages end sufficient eat expression travelling. Of on am father by agreed supply rather either. Own handsome delicate its property mistress her end appetite. Mean are sons too sold nor said. Son share three men power boy you. Now merits wonder effect garret own.
+        </div> 
+    </article>
 
-                Contented get distrusts certainty nay are frankness concealed ham. On unaffected resolution on considered of. No thought me husband or colonel forming effects. End sitting shewing who saw besides son musical adapted. Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.
-                
-                In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested. Present suppose in esteems in demesne colonel it to. End horrible she landlord screened stanhill. Repeated offended you opinions off dissuade ask packages screened. She alteration everything sympathize impossible his get compliment. Collected few extremity suffering met had sportsman.</h3>
-        </Section>
-        <!--Work Section-->
-        <Section Id="Work" class="Work-Section">
-            <h2 class="section-title primary-border">Work</h2>
-            <h3>Assure polite his really and others figure though. Day age advantages end sufficient eat expression travelling. Of on am father by agreed supply rather either. Own handsome delicate its property mistress her end appetite. Mean are sons too sold nor said. Son share three men power boy you. Now merits wonder effect garret own.
+    <!-- Work Projects article grid-->
+    <article>
+        <div id="work" class="work-wrapper"> 
+            <div class="work-grid-container"> 
+                <div class="work-item work-title"> 
+                    <p> Work </p>
+                </div>
+                <div onclick="projectClicked('challenge-1-refactor')" alt="Image Displaying the Horiseon landing Page" title="Horiseon landing Page" target="_blank" style="cursor: pointer;" class="work-item-project challenge-1-refactor">
+                    <span class="span-background"> 
+                        <h3>Horiseon Services</h3>
+                        <span class="lower-text">HTML/CSS</span> 
+                    </span>
+                </div>
+                <div onclick="projectClicked('run-buddy')" alt="Image Displaying the RUN BUDDY landing Page" title="RUN BUDDY landing page" style="cursor: pointer;" class="work-item-project run-buddy">
+                    <span class="span-background">
+                        <h3>Run Buddy</h3>
+                        <span class="lower-text">HTML/CSS</span>
+                    </span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </article>
 
-                Contented get distrusts certainty nay are frankness concealed ham. On unaffected resolution on considered of. No thought me husband or colonel forming effects. End sitting shewing who saw besides son musical adapted. Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.
-                
-                In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested. Present suppose in esteems in demesne colonel it to. End horrible she landlord screened stanhill. Repeated offended you opinions off dissuade ask packages screened. She alteration everything sympathize impossible his get compliment. Collected few extremity suffering met had sportsman.</h3>
-        </Section>
-        <!--Contact Me Section-->
-        <Section id="Contact-Me" class="Contact-Me-Section">
-            <h2 class="section-title primary-border">Contact Me</h2>
-            <h3>Assure polite his really and others figure though. Day age advantages end sufficient eat expression travelling. Of on am father by agreed supply rather either. Own handsome delicate its property mistress her end appetite. Mean are sons too sold nor said. Son share three men power boy you. Now merits wonder effect garret own.
-
-                Contented get distrusts certainty nay are frankness concealed ham. On unaffected resolution on considered of. No thought me husband or colonel forming effects. End sitting shewing who saw besides son musical adapted. Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.
-                
-                In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested. Present suppose in esteems in demesne colonel it to. End horrible she landlord screened stanhill. Repeated offended you opinions off dissuade ask packages screened. She alteration everything sympathize impossible his get compliment. Collected few extremity suffering met had sportsman.</h3>
-        </Section>
-        <!--Resume Section-->
-        <section id="Resume" class="Resume-Section">
-            <h2 class="section-title primary-border">Resume</h2>
-            <h3>Assure polite his really and others figure though. Day age advantages end sufficient eat expression travelling. Of on am father by agreed supply rather either. Own handsome delicate its property mistress her end appetite. Mean are sons too sold nor said. Son share three men power boy you. Now merits wonder effect garret own.
-
-                Contented get distrusts certainty nay are frankness concealed ham. On unaffected resolution on considered of. No thought me husband or colonel forming effects. End sitting shewing who saw besides son musical adapted. Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.
-                
-                In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested. Present suppose in esteems in demesne colonel it to. End horrible she landlord screened stanhill. Repeated offended you opinions off dissuade ask packages screened. She alteration everything sympathize impossible his get compliment. Collected few extremity suffering met had sportsman.</h3>
-        </section>
-
-    </body>
+    <footer>
+        <div id="contact-me" class="footer-wrapper"> 
+            <div class="footer-container"> 
+                <div class="footer-grid-item contact-me"> 
+                    Contact Me
+                </div>
+                <div class="footer-grid-item phone">
+                    <a href="tel:925-551-1551" class="nav-effects">925-551-1551</a>
+                </div>
+                <div class="footer-grid-item email"> 
+                    <a href="mailto:noahsvinois@gmail.com">noahsvinois@gmail.com</a>
+                </div>
+                <div class="footer-grid-item git-hub"> 
+                    <a href="https://github.com/LilCalc/" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script> 
+        function projectClicked(input) { 
+            var input = input; 
+    
+            if (input == "challenge-1-refactor") { 
+                window.open("https://lilcalc.github.io/Challenges/Docs/urban-octo-telegram-main/Develop/");
+            } else if (input == "run-buddy") {
+                window.open("https://lilcalc.github.io/run-buddy/");
+            } 
+            {
+                return true; 
+            }
+        };
+            
+    </script>
+</body>
+</html>
