@@ -195,7 +195,7 @@ border-right: 2px solid var(--about-me-work-border);
 }
 
 .work-item-project.challenge-1-refactor { /* Grid cells with embedded images */
-grid-column: 2 / span 2;
+grid-column: 2 / span 1;
 grid-row: 1 / span 6;
 background-image: url("../assets/images/challeng-1-refactor-code-smaller.jpg");
 background-size: cover; 
@@ -208,8 +208,8 @@ border: .25vw solid var(--rgba-border-color-opacity);
 }
 
 .work-item-project.run-buddy {
-grid-column: 2 /span 2;
-grid-row: 10 / span 6;
+grid-column: 2 /span 1;
+grid-row: 7 / span 6;
 background-image: url("../assets/images/Screen\ Shot\ 2022-04-03\ at\ 1.41.28\ PM.png");
 background-size: cover;
 display: flex; 
@@ -221,9 +221,22 @@ border: .25vw solid var(--rgba-border-color-opacity);
 }
 
 .work-item-project.concert-explorer {
-  grid-column: 2 /span 2;
-  grid-row: 7 / span 3;
+  grid-column: 3 /span 1;
+  grid-row: 7 / span 6;
   background-image: url("../assets/images/Screen\ Shot\ 2022-05-05\ at\ 8.16.34\ PM.png");
+  background-size: cover;
+  display: flex; 
+  align-items: flex-end; 
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: .25vw solid var(--rgba-border-color-opacity);
+  }
+  
+  .work-item-project.babblingBrook {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 6;
+  background-image: url("../assets/images/Screen\ Shot\ 2022-06-13\ at\ 3.41.26\ PM.png");
   background-size: cover;
   display: flex; 
   align-items: flex-end; 
