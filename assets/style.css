@@ -207,10 +207,10 @@ text-align: left;
 border: .25vw solid var(--rgba-border-color-opacity);
 }
 
-.work-item-project.run-buddy {
+.work-item-project.Support-local-kc {
 grid-column: 2 /span 1;
 grid-row: 7 / span 6;
-background-image: url("../assets/images/Screen\ Shot\ 2022-04-03\ at\ 1.41.28\ PM.png");
+background-image: url("../assets/images/Screen\ Shot\ 2022-07-08\ at\ 9.28.30\ AM.png");
 background-size: cover;
 display: flex; 
 align-items: flex-end; 
